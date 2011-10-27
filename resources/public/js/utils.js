@@ -558,7 +558,7 @@
                     }
                 }
                 queryAll("span.result", _console).forEach(function(el) {
-                    prettyPrintNode(el);
+                    prettyPrintNode(el, "clj");
                 });
                 _console.scrollTop = _console.scrollHeight;
             }
