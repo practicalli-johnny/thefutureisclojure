@@ -16,8 +16,8 @@
         (.send socket (json/json-str
                        {:error (.getMessage (main/repl-exception e))}))))))
 
-(defn start []
-  (doto (WebServers/createWebServer 8000)
+(defn start [port]
+  (doto (WebServers/createWebServer port)
     (.add "/repl"
           (proxy [WebSocketHandler] []
             (onOpen [c] (println "opened" c))
@@ -27,5 +27,6 @@
     (.start)))
 
 (defn -main [& m]
-  (start))
+  (let [port (Integer. (get (System/getenv) "PORT" "8000"))]
+    (start port)))
 
