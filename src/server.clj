@@ -84,5 +84,6 @@
 
 (defn -main [& m]
   (let [port (Integer. (get (System/getenv) "PORT" "8000"))]
+    (println "Listening on port" port)
     (start port)))
 
