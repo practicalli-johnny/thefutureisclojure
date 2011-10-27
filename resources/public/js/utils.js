@@ -532,13 +532,9 @@
             if (selection.start.row === selection.end.row && selection.start.column === selection.end.column) selection = null;
             var code = selection ? editor.getSession().doc.getTextRange(selection) : editor.getSession().getValue();
 
-            var output = ">> " + escapeHTML(code).trim().replace(/\n/g, "\n>> ");
-            output = "<span class=\"input\">" + output + "</span>\n";
-
             var _console = this._slides[this._getCurrentIndex() - 1].getEditorConsole();
             if (_console) {
-                _console.innerHTML = output;
-                _console.scrollTop = _console.scrollHeight;
+                _console.innerHTML = "";
             }
 
             this.repl.send(JSON.stringify(code));
@@ -549,12 +545,21 @@
             var _console = this._slides[this._getCurrentIndex() - 1].getEditorConsole();
 
             if (_console) {
-                if (response.error) {
-                    _console.innerHTML += "<span class=\"error\">" + escapeHTML(response.error) + "</span>";
-                } else {
-                    _console.innerHTML += "<span class=\"output\">" + escapeHTML(response.result) + "</span>";
-                    prettyPrintNode(query("span.output", _console));
+                for (var i = 0; i < response.eval.length; i++) {
+                    var sexp = response.eval[i];
+                    _console.innerHTML += "<span class=\"input\">&gt;&gt; " + escapeHTML(sexp.code.replace(/\n/g, "\n>> ")) + "</span>\n";
+                    if (sexp.out) {
+                        _console.innerHTML += "<span class=\"output\">" + escapeHTML(sexp.out.trim()) + "</span>\n";
+                    }
+                    if (sexp.error) {
+                        _console.innerHTML += "<span class=\"error\">" + escapeHTML(sexp.error) + "</span>\n";
+                    } else {
+                        _console.innerHTML += "<span class=\"result\">" + escapeHTML(sexp.result) + "</span>\n";
+                    }
                 }
+                queryAll("span.result", _console).forEach(function(el) {
+                    prettyPrintNode(el);
+                });
                 _console.scrollTop = _console.scrollHeight;
             }
             
