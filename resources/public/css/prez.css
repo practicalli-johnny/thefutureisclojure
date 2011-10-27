@@ -1,0 +1,132 @@
+.presentation {
+    background: black url(../media/black_paper.png) repeat;
+}
+
+.slide {
+    background: #eee url(../media/cork_1.png) repeat;
+}
+
+.slide li, .slide p {
+    font-size: 28px;
+    line-height: 1em;
+}
+
+.slide li {
+    list-style-type: disc;
+}
+
+.slide pre {
+    margin: 0.5em 0;
+    font-family: 'Droid Sans Mono';
+    font-size: 20px;
+}
+
+.slide code {
+    font-family: 'Droid Sans Mono';
+    font-size: 90%;
+}
+
+img.drop {
+    box-shadow: 8px 8px 16px #888;
+}
+
+h1 {
+    letter-spacing: -2px;
+    font-size: 96px;
+    font-weight: bold;
+}
+
+h2 {
+    color: #181818;
+    font-size: 56px;
+    letter-spacing: -1px;
+}
+
+h3 {
+    color: black;
+    font-size: 40px;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.kitteh {
+    font-family: 'Impact';
+    font-weight: normal;
+}
+
+div.editor, pre.editor-jsbuffer, pre.editor-console {
+    font-size: 18px;
+}
+
+div.editor {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -450px;
+    width: 886px;
+    margin-top: -324px;
+    height: 424px;
+    visibility: hidden;
+    background: #f8f8f8;
+}
+
+div.editor.visible {
+    visibility: visible !important;
+}
+
+div.editor-content {
+    display: none;
+}
+
+pre.editor-console {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -440px;
+    width: 855px;
+    margin-top: 110px;
+    height: 206px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 10px;
+    border-radius: 10px;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+pre.editor-console span.input {
+    color: #666;
+}
+
+pre.editor-console span.output {
+    font-weight: bold;
+}
+
+pre.editor-console span.error {
+    color: red;
+}
+
+.to-cycle {
+    display: none;
+}
+
+
+
+/* Uncomment to put editor's output frame on top
+
+div.editor {
+margin-left: -450px;
+width: 462px;
+margin-top: -192px;
+height: 514px;
+}
+
+pre.editor-console {
+margin-left: 22px;
+width: 392px;
+margin-top: -340px;
+height: 518px;
+}
+
+*/
+
