@@ -2,5 +2,6 @@
   :description "Clojure presentation"
   :dependencies [[org.clojure/clojure "1.3.0"]
                  [org.clojure/data.json "0.1.2"]
-                 [org.webbitserver/webbit "0.2.10"]]
+                 [org.webbitserver/webbit "0.2.10"]
+                 [com.miglayout/miglayout "3.7.4"]]
   :main server)
