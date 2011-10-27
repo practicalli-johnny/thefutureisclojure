@@ -6,4 +6,5 @@
                  [org.webbitserver/webbit "0.2.10"]
                  [clojail "0.4.6-beta1"]
                  [com.miglayout/miglayout "3.7.4"]]
+  :jvm-opts ["-Djava.security.policy=security.policy"]
   :main server)
