@@ -1,0 +1,98 @@
+* John McCarthy
+** Father of Artificial Intelligence
+*** Current AI really only good for chess, jmc was an avid chess player.
+** Also created Lisp
+*** Eric Raymond quote here.
+* Paul Graham
+** Venture capitalist @ Y Combinator
+** How he got rich, the Viaweb story
+*** Sold to Yahoo, became Yahoo Store.
+*** Lisp was the secret weapon.
+* How does a programming language give you an edge?
+** Pointy haired boss
+*** Knows nothing about technology; has strong opinions about it.
+*** Java is the industry standard. Wants you to use it.
+*** It's a standard, so won't get in trouble for using it.
+*** Java devs are easy to replace.
+** Languages aren't equivalent.
+*** James Gosling made Java to address C++ problems.
+*** Java is better than C++ at solving those problems.
+*** Other languages might be better for other problems.
+*** Solve a programming problem by evaluating languages and finding devs?
+*** Pointy haired boss finds it more comfortable not to think about this.
+** Language trends
+*** Progressively more abstract.
+*** Assembly -> C -> C++ -> Java -> Dynamic languages.
+*** Today's JavaScript could be translated directly into Lisp.
+*** In 2011, mainstream languages still not where Lisp was in 1958.
+** The accidental discovery of Lisp
+*** John McCarthy created it as a theoretical exercise in lambda calculus.
+*** Steve Russell wrote an interpreter for it, and it worked.
+*** Everybody went "holy shit."
+*** It's not deliberate programming language design, it's math.
+*** Fortran was designed as a replacement for assembly.
+*** Lisp was designed as a mathematical exercise.
+*** Math is power!
+** The Nine Pillars of Lisp
+*** 1. Conditionals. Fortran I didn't have if statements, only goto-if.
+*** 2. Function type. Functions as "first class objects."
+*** 3. Recursion.
+*** 4. Dynamic typing.
+*** 5. Garbage collection.
+*** 6. Everything is an expression.
+*** 7. Symbol type.
+*** 8. The syntax is the parse tree.
+*** 9. No distinction between read-time, compile-time and runtime, allowing for macros.
+*** C: 2. Java: 3.5. JS: 5. CS+Python: 6. Ruby: 7. Haskell has kind of 7.
+*** Only lisps have 8 and 9.
+** Macros
+*** Macros are programs that write programs.
+*** They allow for an infinite level of abstraction.
+*** Any problem you want to solve, you can convert Lisp into a DSL that can do exactly what you need.
+There is nothing cooler than a macro. They make metaprogramming and
+DSLs a piece of cake.
+*** Simple projects could be written in any language.
+*** As complexity increases, the benefits of Lisp become more and more obvious.
+* Back to the Viaweb story
+** Technology choice
+*** Before the web, apps were best written in the language of the OS, usually C.
+*** With the web came the freedom to use any language you like. Most people kept on using C.
+*** For a tech startup, rapid development is a huge competitive advantage.
+*** High level of abstraction means fewer developers needed.
+**** Protip: Agile teams are more efficient the smaller they are.
+** Rapid development
+*** Competitors couldn't keep up.
+*** When a competitor launched a new feature, implementing it was a matter of days.
+**** New features were implemented in the space between the competitor's press conference and when the press called them for a comment.
+*** "In business, there is nothing more valuable than a technical advantage your competitors don't understand."
+** Profit!
+*** Viaweb was crazy successful, got acquired by Yahoo!, and Paul is now a filthy rich VC. All because of Lisp.
+* Clojure
+** That's all very well for startups, but in the enterprise we have this thing called legacy code
+*** What if Lisp could _run_ all that legacy code?
+*** What if you could leverage your preexisting knowledge and APIs with a Lisp?
+*** What if it runs on your existing production environment?
+*** Clojure is a Lisp for the JVM!
+*** It's also a Lisp for the CLR if that's your perversion.
+*** It even runs in a browser if you make it.
+** But for our crazy multithreaded distributed shit we can't go for a toy language
+*** Clojure was built for concurrency.
+*** Immutable data structures.
+*** Software Transactional Memory.
+*** It's an industrial strength language.
+* Crash course
+** Basic datatypes
+*** Numbers, strings, lists, vectors.
+*** Functions, defining and calling.
+*** Maps and sets.
+** Talking to Java
+*** Calling static methods.
+*** Creating new objects.
+*** Method invocation.
+** Functional programming
+*** Anonymous functions.
+*** map, filter, reduce.
+*** Practical example: Swing getMinimumSize()
+** Macros
+*** defmacro.
+*** Practical example: implement logical and, explain why you can't do it as a function.
