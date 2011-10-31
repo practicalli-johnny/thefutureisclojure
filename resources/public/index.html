@@ -360,12 +360,20 @@
 
 
         <div class="slide" id="kwisatz-haderach-slide">
+          <style>
+            #kwisatz-haderach-slide p.quote {
+              margin-top: 1.17em;
+            }
+            #kwisatz-haderach-slide footer {
+              margin-bottom: 1.17em;
+            }
+          </style>
           <section class="middle">
             <blockquote>
               <p class="photo"><img src="media/kwisatz-haderach.png"/></p>
-              <p>Try looking into that place where you dare not look.
+              <p class="quote">Try looking into that place where you dare not look.
                 You'll find me there, staring back at you.</p>
-              <footer><cite>John McCarthy</cite></footer>
+              <footer data-cycle><cite>John McCarthy</cite><cite>OK, he didn't really say that</cite></footer>
             </blockquote>
           </section>
         </div>
@@ -382,8 +390,8 @@
                 build a better <strong>Turing Machine</strong>.</p>
               <p><strong>Steve Russell</strong> read McCarthy's paper
                 and discovered the Lisp machine could
-                be <strong>implemented</strong> in machine 
-                code.</p>
+                be <strong>implemented</strong> in <strong>machine 
+                  code.</strong></p>
               <p>Everybody went <strong>"holy shit."</strong></p>
             </div>
           </section>
@@ -444,16 +452,18 @@
 
 
         <div class="slide" id="only-lisp-slide">
-          <section class="middle" data-build>
+          <section class="middle">
             <p>Only <strong>Lisp</strong> has 9 out of 9.</p>
-            <p>Only <strong>Lisp</strong> is written directly as a
-              <strong>parse tree</strong>,<br/>and
-              only <strong>Lisp</strong> has no distinction
-              between<br/><strong>compile time</strong>
-              and <strong>runtime</strong>.</p>
-            <p>This is what enables Lisp's
-              most <strong>powerful</strong> feature:</p>
-            <h2>Macros.</h2>
+            <div data-build>
+              <p>Only <strong>Lisp</strong> is written directly as a
+                <strong>parse tree</strong>,<br/>and
+                only <strong>Lisp</strong> has no distinction
+                between<br/><strong>compile time</strong>
+                and <strong>runtime</strong>.</p>
+              <p>This is what enables Lisp's
+                most <strong>powerful</strong> feature:</p>
+              <h2>Macros.</h2>
+            </div>
           </section>
         </div>
 
@@ -476,9 +486,9 @@
 
         <div class="slide" id="lisp-is-your-only-hope-slide">
           <section class="middle">
+            <p>Simple projects could be written
+              in <strong>any</strong> language.</p>
             <div class="block" data-build>
-              <p>Simple projects could be written
-                in <strong>any</strong> language.</p>
               <p>If all you write is <strong>glue</strong>,
                 the best choice is the language <strong>closest to
                 what you're gluing</strong>.</p>
@@ -541,9 +551,9 @@
 
         <div class="slide" id="the-lisp-experiment-slide">
           <section class="middle">
+            <p>Paul Graham decided to try writing the Viaweb product<br/>
+              in <strong>Lisp</strong>, to test this hypothesis.</p>
             <div class="block" data-build>
-              <p>Paul Graham decided to try writing the Viaweb product<br/>
-                in <strong>Lisp</strong>, to test this hypothesis.</p>
               <p><strong>It worked.</strong></p>
             </div>
           </section>
@@ -552,9 +562,9 @@
 
         <div class="slide" id="rapid-development-slide">
           <section class="middle">
+            <li>Competitors couldn't <strong>keep up</strong> with<br/>
+              the pace of <strong>new features</strong>.</li>
             <div class="block" data-build>
-              <li>Competitors couldn't <strong>keep up</strong> with<br/>
-                the pace of <strong>new features</strong>.</li>
               <li>If a competitor came up with a new feature first,
                 implementing it was only a matter
                 of <strong>days</strong>.</li>
@@ -578,11 +588,11 @@
 
         <div class="slide" id="because-of-lisp-slide">
           <section class="middle">
+            <p>Viaweb <strong>dominated</strong> the market, and was
+              eventually<br/>acquired by <strong>Yahoo!</strong> for a
+              <strong>huge</strong> sum of money.<br/>Paul is now a <strong>filthy
+                rich venture capitalist</strong>.</p>
             <div class="block" data-build>
-              <p>Viaweb <strong>dominated</strong> the market, and was
-                eventually acquired by <strong>Yahoo!</strong> for a
-                <strong>huge</strong> sum of money.<br/>Paul is now a <strong>filthy
-                  rich venture capitalist</strong>.</p>
               <p>He gives credit to <strong>Lisp</strong>.</p>
             </div>
           </section>
@@ -610,9 +620,9 @@
 
         <div class="slide" id="what-if-slide">
           <section class="middle">
+            <li>What if Lisp could <strong>run</strong> all your
+              legacy code?</li>
             <div class="block" data-build>
-              <li>What if Lisp could <strong>run</strong> all your
-                legacy code?</li>
               <li>What if you could leverage your<br/><strong>preexisting
                   knowledge</strong> and <strong>APIs</strong> with
                   Lisp?</li>
