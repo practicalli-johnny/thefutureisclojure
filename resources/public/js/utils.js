@@ -390,9 +390,9 @@
         documentReady(function() {
             _t._update();
         });
-        if (MozWebSocket !== undefined) {
+        try {
             WebSocket = MozWebSocket;
-        }
+        } catch (e) {}
         this.repl = new WebSocket("ws://" + window.location.host + "/repl");
         this.repl.onmessage = this.onReplMessage.bind(this);
     };
