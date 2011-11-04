@@ -1,3 +1,27 @@
+The Future is Clojure
+
+* Blurb
+
+"There is one thing stronger than all the armies in the world," said
+Victor Hugo, "and that is an idea whose time has come." Today, fifty
+years after John McCarthy invented the Lisp language, that time is
+finally upon us: Clojure is a modern Lisp dialect on the cusp of a
+breakthrough into the mainstream. This presentation aims to explain
+why the power and purity of Lisp make that breakthrough inevitable,
+and why you as a developer, architect or executive decision maker
+cannot afford to miss your chance to be in the vanguard of the Clojure
+revolution.
+
+* Speaker bio
+
+Bodil has been a web developer since before the web was cool, and has
+shepherded many big projects built on web technologies, among them two
+generations of web map applications for Eniro. She currently works as
+a Java developer for Steria, honing her combat skills on enterprise
+developers reluctant to adopt shiny Future Tech such as Git, Clojure
+and Node.JS.
+
+
 * John McCarthy
 ** Father of Artificial Intelligence
 *** Current AI really only good for chess, jmc was an avid chess player.
